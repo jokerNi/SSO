@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.sso.R;
 import com.sso.utils.JPushUtil;
+import com.sso.utils.Log;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         init();
         registerMessageReceiver();  // used for receive msg
-        msgText.setText("");
+//        msgText.setText("");
     }
 
     // 初始化 JPush。如果已经初始化，但没有登录成功，则执行重新登录。
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setCostomMsg(String msg) {
         if (null != msgText) {
+            Log.e("msg",msg);
             msgText.setText(msg);
         }
     }

@@ -51,14 +51,6 @@
         <!--JPush-->
 
         <!-- For test only 测试状态通知栏，需要打开的Activity -->
-        <activity
-            android:name=".activity.TestActivity"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="jpush.testAction" />
-                <category android:name="jpush.testCategory" />
-            </intent-filter>
-        </activity>
 
         <!-- Rich push 核心功能 since 2.0.6-->
         <activity
